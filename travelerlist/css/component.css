@@ -1,0 +1,330 @@
+/*!
+ * Contact-List v0.0.1
+ * This is a contact list app
+ * (c) 2019 David Walters
+ * MIT License
+ * http://link-to-your-git-repo.com
+ */
+
+/**
+ * @file
+ * sass/components.scss
+ *
+ * CSS rules that style design components (and their associated states and themes.)
+ */
+/**
+ * @file
+ * sass/partials/common/_imports.scss
+ *
+ * Importing this file should not generate any CSS.
+ */
+/**
+ * @file
+ * sass/partials/common/_variables.scss
+ *
+ */
+/* line 1, src/sass/partials/components/_header.scss */
+.header {
+  background-image: linear-gradient(45deg, #F77062, #FE5196);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: 0.0625em 0.0625em 0.25em 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0.0625em 0.0625em 0.25em 0 rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  max-width: 40em;
+  width: 88%;
+  z-index: 3;
+}
+
+/* line 9, src/sass/partials/components/_header.scss */
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+/* line 15, src/sass/partials/components/_header.scss */
+.header li a {
+  display: block;
+  color: #333;
+  padding: 1.25em;
+  text-decoration: none;
+}
+
+/* line 20, src/sass/partials/components/_header.scss */
+.header li a:hover {
+  background-color: #f4f4f4;
+}
+
+/* line 24, src/sass/partials/components/_header.scss */
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+/* line 27, src/sass/partials/components/_header.scss */
+.header .title {
+  display: block;
+  float: left;
+  padding: 1.25em 1.875em;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  width: 38%;
+}
+
+/* line 37, src/sass/partials/components/_header.scss */
+.header .menu {
+  max-height: 0;
+  -webkit-transition: max-height .2s ease-out;
+  transition: max-height .2s ease-out;
+}
+
+/* line 41, src/sass/partials/components/_header.scss */
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  padding: 1.75em 1.25em;
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* line 47, src/sass/partials/components/_header.scss */
+.header .menu-icon .navicon {
+  background: #fff;
+  display: block;
+  height: 0.125em;
+  position: relative;
+  -webkit-transition: background .2s ease-out;
+  transition: background .2s ease-out;
+  width: 1.125em;
+}
+
+/* line 54, src/sass/partials/components/_header.scss */
+.header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
+  background: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+/* line 63, src/sass/partials/components/_header.scss */
+.header .menu-icon .navicon:before {
+  top: 0.3125em;
+}
+
+/* line 66, src/sass/partials/components/_header.scss */
+.header .menu-icon .navicon:after {
+  top: -0.3125em;
+}
+
+/* line 71, src/sass/partials/components/_header.scss */
+.header .menu-btn {
+  display: none;
+}
+
+/* line 74, src/sass/partials/components/_header.scss */
+.header .menu-btn:checked ~ .menu {
+  max-height: 15em;
+}
+
+/* line 78, src/sass/partials/components/_header.scss */
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+/* line 80, src/sass/partials/components/_header.scss */
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/* line 83, src/sass/partials/components/_header.scss */
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+/* line 88, src/sass/partials/components/_header.scss */
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before, .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+@media (min-width: 48em) {
+  /* line 99, src/sass/partials/components/_header.scss */
+  .header {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  /* line 101, src/sass/partials/components/_header.scss */
+  .header li {
+    float: left;
+  }
+  /* line 103, src/sass/partials/components/_header.scss */
+  .header li a {
+    padding: 1.25em 1.875em;
+  }
+  /* line 107, src/sass/partials/components/_header.scss */
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  /* line 112, src/sass/partials/components/_header.scss */
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+/* line 1, src/sass/partials/components/_accordion.scss */
+.accordion {
+  padding-top: 4.0625em;
+}
+
+/* line 5, src/sass/partials/components/_accordion.scss */
+.accordion a {
+  padding: 1em;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+}
+
+/* line 12, src/sass/partials/components/_accordion.scss */
+.accordion a::after {
+  font-family: "Font Awesome 5 Pro";
+  content: "\f078";
+  color: #E0E0E0;
+  font-weight: 900;
+  padding-top: 1.5625em;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+}
+
+/* line 21, src/sass/partials/components/_accordion.scss */
+.accordion a.active {
+  -webkit-box-shadow: 0 0.75em 1.875em -0.5em rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0.75em 1.875em -0.5em rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+/* line 25, src/sass/partials/components/_accordion.scss */
+.accordion a.active::after {
+  content: '\f077';
+}
+
+/* line 28, src/sass/partials/components/_accordion.scss */
+.accordion a:hover {
+  cursor: pointer;
+}
+
+/* line 30, src/sass/partials/components/_accordion.scss */
+.accordion a:hover::after {
+  cursor: pointer;
+}
+
+/* line 37, src/sass/partials/components/_accordion.scss */
+.accordion__item {
+  padding: 0.3125em 0;
+}
+
+/* line 41, src/sass/partials/components/_accordion.scss */
+.accordion__item a:nth-last-child(1) {
+  border: none;
+}
+
+/* line 45, src/sass/partials/components/_accordion.scss */
+.accordion__item .content {
+  background-image: linear-gradient(45deg, #F77062, #FE5196);
+  background-repeat: repeat-x;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 0 0.3125em;
+  padding: 0 1em;
+  max-height: 0;
+  opacity: 1;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+/* line 55, src/sass/partials/components/_accordion.scss */
+.accordion__item .content.active {
+  max-height: 100%;
+}
+
+/* line 3, src/sass/partials/components/_traveler.scss */
+.traveler span, .traveler__contact span {
+  display: inline-block;
+}
+
+/* line 5, src/sass/partials/components/_traveler.scss */
+.traveler span::first-letter, .traveler__contact span::first-letter {
+  text-transform: uppercase;
+}
+
+/* line 10, src/sass/partials/components/_traveler.scss */
+.traveler__name-location {
+  width: 40%;
+}
+
+/* line 13, src/sass/partials/components/_traveler.scss */
+.traveler__name {
+  color: #F77062;
+  margin-bottom: 0;
+}
+
+/* line 18, src/sass/partials/components/_traveler.scss */
+.traveler__location {
+  color: #878787;
+  font-size: .75em;
+  margin: 0;
+}
+
+/* line 24, src/sass/partials/components/_traveler.scss */
+.traveler__image img {
+  border-radius: 18em;
+}
+
+/* line 28, src/sass/partials/components/_traveler.scss */
+.traveler__phone {
+  border-right: 0.03125em solid #666;
+}
+
+/* line 32, src/sass/partials/components/_traveler.scss */
+.traveler__phone, .traveler__email {
+  color: #fff;
+  width: 50%;
+  text-align: center;
+  font-size: 0.75em;
+  padding: 1.25em 0;
+}
+
+@media (min-width: 48em) {
+  /* line 32, src/sass/partials/components/_traveler.scss */
+  .traveler__phone, .traveler__email {
+    font-size: 0.875em;
+  }
+}
