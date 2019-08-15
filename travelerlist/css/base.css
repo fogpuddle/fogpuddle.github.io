@@ -1,0 +1,49 @@
+/*!
+ * Contact-List v0.0.1
+ * This is a contact list app
+ * (c) 2019 David Walters
+ * MIT License
+ * http://link-to-your-git-repo.com
+ */
+
+/**
+ * @file
+ * sass/base.scss
+ *
+ * CSS rules that style HTML elements ("base" styles).
+ */
+/**
+ * @file
+ * sass/partials/common/_variables.scss
+ *
+ */
+/**
+ * @file
+ * sass/partials/common/_imports.scss
+ *
+ * Importing this file should not generate any CSS.
+ */
+/**
+ * @file
+ * sass/partials/common/_variables.scss
+ *
+ */
+/**
+ * @section Base Styles
+ */
+/* line 5, src/sass/partials/base/_base.scss */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0 auto;
+  max-width: 40em;
+  width: 88%;
+  background-color: #F9FAFB;
+}
+
+/* line 13, src/sass/partials/base/_base.scss */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
